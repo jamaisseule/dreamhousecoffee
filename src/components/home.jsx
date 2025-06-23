@@ -9,7 +9,7 @@ const Home = ({ setActiveSection }) => (
           Dream House Coffee
         </h1>
         <p className="text-xl text-amber-700 mb-8">
-          Nơi ước mơ bắt đầu từ một ly cà phê thơm ngon
+          Nơi ước mơ bắt đầu từ một ly cà phê thơm ngon hehe
         </p>
         <div className="flex justify-center space-x-4">
           <button
