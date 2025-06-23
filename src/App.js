@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Home from "./components/home.jsx";
+import About from "./components/about.jsx";
+import Menu from "./components/menu.jsx";
+import Promotions from "./components/promotions.jsx";
+import Events from "./components/events.jsx";
+import Contact from "./components/contact.jsx";
+import NavigationMenu from "./components/navigation-menu.jsx";
 
 function App() {
+  const [activeSection, setActiveSection] = useState("home");
+
+  const renderSection = () => {
+    switch (activeSection) {
+      case "home":
+        return <Home setActiveSection={setActiveSection} />;
+      case "about":
+        return <About />;
+      case "menu":
+        return <Menu />;
+      case "promotions":
+        return <Promotions />;
+      case "events":
+        return <Events />;
+      case "contact":
+        return <Contact />;
+      default:
+        return <Home setActiveSection={setActiveSection} />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen">
+      <NavigationMenu
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+      />
+      {renderSection()}
     </div>
   );
 }
