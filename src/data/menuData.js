@@ -1,48 +1,42 @@
- const menuData = {
-  coffee: [
-    { name: "CAFE ĐEN", hot: "23K", ice: "23K" },
-    { name: "CAFE SỮA", hot: "25K", ice: "25K" },
-    { name: "CAFE MUỐI", hot: "-", ice: "35K" },
-    { name: "BẠC XỈU", hot: "-", ice: "33K" },
-    { name: "BẠC XỈU MUỐI", hot: "-", ice: "35K" },
-    { name: "CAFE DỪA", hot: "-", ice: "42K" },
-  ],
-  matcha: [
-    { name: "MATCHA LATTE", price: "39K" },
-    { name: "MATCHA KEM MUỐI", price: "44K" },
-    { name: "MATCHA OREO", price: "42K" },
-    { name: "MATCHA OREO KEM PHÔ MAI ĐẬU", price: "48K" },
-    { name: "MATCHA OREO KEM MUỐI", price: "45K" },
-    { name: "MATCHA COCO", price: "43K" },
-  ],
-  cacao: [
-    { name: "CACAO", hot: "29K", ice: "29K" },
-    { name: "CACAO MUỐI", hot: "-", ice: "34K" },
-    { name: "CACAO COCO", hot: "-", ice: "37K" },
-    { name: "CACAO PHÔ MAI", hot: "-", ice: "39K" },
-  ],
-  smoothies: [
-    { name: "SỮA CHUA ĐÁ", price: "30K" },
-    { name: "SỮA CHUA ĐÀO", price: "35K" },
-    { name: "SỮA CHUA KIWI", price: "35K" },
-    { name: "SỮA CHUA VIỆT QUẤT", price: "35K" },
-    { name: "SỮA CHUA XOÀI", price: "35K" },
-    { name: "SỮA CHUA DÂU", price: "35K" },
-  ],
-  tea: [
-    { name: "TRÀ ĐÀO CAM SẢ", price: "45K" },
-    { name: "TRÀ Ổ LONG VẢI", price: "45K" },
-    { name: "TRÀ ỔI HOA HỒNG", price: "45K" },
-    { name: "TRÀ Ổ LONG ỔI", price: "45K" },
-    { name: "TRÀ CHANH", price: "29K" },
-    { name: "NƯỚC CAM", price: "27K" },
-  ],
-  snacks: [
-    { name: "BÁP (RONG BIỂN/PHÔ MAI/CARAMEL/SOCOLA)", price: "20K" },
-    { name: "BÁNH TRÁNG (PMHK/TỎI BO/THẤP CẨM/TÔM BO/GÀ QUAY)", price: "20K" },
-    { name: "KHÔ GÀ/BÒ/MỰC", price: "22K" },
-    { name: "HƯỚNG DƯƠNG (DỪA)", price: "17K" },
-    { name: "HƯỚNG DƯƠNG", price: "15K" },
-  ],
+// data.js
+export const menuItems = [
+  {
+    category: "Espresso Drinks",
+    items: [
+      { name: "Espresso", price: "45,000₫", description: "Pure, intense coffee shot" },
+      { name: "Americano", price: "55,000₫", description: "Espresso with hot water" },
+      { name: "Cappuccino", price: "65,000₫", description: "Espresso with steamed milk and foam" },
+      { name: "Latte", price: "70,000₫", description: "Smooth espresso with steamed milk" },
+      { name: "Macchiato", price: "68,000₫", description: "Espresso with a dollop of foam" },
+      { name: "Mocha", price: "75,000₫", description: "Espresso with chocolate and steamed milk" }
+    ]
+  },
+  {
+    category: "Cold Beverages",
+    items: [
+      { name: "Iced Coffee", price: "60,000₫", description: "Chilled Vietnamese coffee" },
+      { name: "Cold Brew", price: "65,000₫", description: "Smooth, low-acid cold extraction" },
+      { name: "Iced Latte", price: "75,000₫", description: "Espresso with cold milk over ice" },
+      { name: "Frappé", price: "80,000₫", description: "Blended ice coffee drink" },
+      { name: "Matcha Latte", price: "78,000₫", description: "Premium Japanese matcha with milk" }
+    ]
+  },
+  {
+    category: "Pastries & Snacks",
+    items: [
+      { name: "Croissant", price: "35,000₫", description: "Buttery, flaky French pastry" },
+      { name: "Chocolate Muffin", price: "40,000₫", description: "Rich chocolate chip muffin" },
+      { name: "Tiramisu", price: "85,000₫", description: "Classic Italian coffee dessert" },
+      { name: "Cheesecake", price: "80,000₫", description: "Creamy New York style cheesecake" },
+      { name: "Banh Mi", price: "55,000₫", description: "Vietnamese sandwich with coffee pairing" }
+    ]
+  }
+];
+
+export const contactInfo = {
+  address: "44 Bùi Thiên Ngộ, Đà Nẵng, Việt Nam",
+  phone: "+84 90 653 81 02",
+  email: "dreamhouse44buithienngo@gmail.com",
+  hours: "Mon - Sun: 7:00 AM - 10:00 PM"
+  
 };
-export default menuData; 
