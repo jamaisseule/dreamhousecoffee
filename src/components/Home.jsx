@@ -13,7 +13,7 @@ const Home = ({ scrollToSection }) => {
       image: bg1,
       title: "Pure Coffee.",
       subtitle: "Pure Experience.",
-      description: "Cà phê thuần khiết. Trải nghiệm thuần khiết.",
+      description: "Cà phê tinh khiết. Trải nghiệm thuần khiết.",
       text: "We put a little love in your cup, so you can put a lot of love in someone else's day...with coffee.",
     },
     {
