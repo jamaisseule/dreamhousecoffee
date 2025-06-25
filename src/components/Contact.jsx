@@ -1,6 +1,13 @@
 // Contact.js
 import React from "react";
-import { Mail, Phone, MapPin, Instagram, Facebook, PhoneCall } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Facebook,
+  PhoneCall,
+} from "lucide-react";
 import { contactInfo } from "../data/menuData";
 
 const Contact = () => {
@@ -26,8 +33,14 @@ const Contact = () => {
               </div>
               <div className="flex items-center space-x-4">
                 <Phone className="w-6 h-6 text-amber-400" />
-                <span>{contactInfo.phone}</span>
+                <a
+                  href={`tel:${contactInfo.phone}`}
+                  className="hover:underline"
+                >
+                  {contactInfo.phone}
+                </a>
               </div>
+
               <div className="flex items-center space-x-4">
                 <MapPin className="w-6 h-6 text-amber-400" />
                 <span>{contactInfo.address}</span>
@@ -54,7 +67,7 @@ const Contact = () => {
                   <Facebook className="w-5 h-5 text-white" />
                 </a>
                 <a
-                  href="tel:+84906538102" 
+                  href="tel:+84906538102"
                   className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center hover:bg-amber-700 cursor-pointer transition-colors"
                 >
                   <PhoneCall className="w-5 h-5 text-white" />

@@ -46,7 +46,12 @@ const Location = () => {
                     <h3 className="text-lg font-semibold text-gray-800">
                       Phone
                     </h3>
-                    <p className="text-gray-600">{contactInfo.phone}</p>
+                    <a
+                      href={`tel:${contactInfo.phone}`}
+                      className="text-gray-600 hover:underline"
+                    >
+                      {contactInfo.phone}
+                    </a>
                   </div>
                 </div>
 
