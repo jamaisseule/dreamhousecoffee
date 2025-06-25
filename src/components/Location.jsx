@@ -69,7 +69,7 @@ const Location = () => {
                       rel="noopener noreferrer"
                       className="text-amber-600 hover:underline"
                     >
-                      facebook.com/yourpage
+                      facebook.com/cafe.dreamhouse
                     </a>
                   </div>
                 </div>
