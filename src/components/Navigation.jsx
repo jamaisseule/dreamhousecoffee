@@ -23,7 +23,7 @@ const Navigation = ({ activeSection, scrollToSection }) => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div
-            className="flex items-center pt-2 pb-4 space-x-2 cursor-pointer"
+            className="flex items-center pt-4 pb-4 space-x-2 cursor-pointer"
             onClick={() => handleNavClick("home")}
           >
             <img
