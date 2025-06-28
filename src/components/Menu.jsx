@@ -7,6 +7,7 @@ import {
   ChevronRight,
   Star,
   Crown,
+  GlassWater,
 } from "lucide-react";
 
 const Menu = () => {
@@ -97,7 +98,7 @@ const Menu = () => {
     },
     cacao: {
       title: "CACAO",
-      icon: <Coffee className="w-6 h-6" />,
+      icon: <GlassWater className="w-6 h-6" />,
       color: "orange",
       items: [
         {
