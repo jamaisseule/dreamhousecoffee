@@ -8,6 +8,4 @@ This website serves as a digital home for our café, where visitors can explore 
 
 ---
 
-Dream House Coffee
-
-Relax. Refresh. Recharge.
+Dream House | Relax. Refresh. Recharge.
