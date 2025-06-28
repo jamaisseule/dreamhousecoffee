@@ -6,6 +6,7 @@ import {
   Cookie,
   ChevronRight,
   Star,
+  Crown,
 } from "lucide-react";
 
 const Menu = () => {
@@ -21,37 +22,38 @@ const Menu = () => {
           name: "CAFE ĐEN",
           hot: "23K",
           cold: "23K",
-          description: "Traditional Vietnamese black coffee",
+          description: "Traditional Vietnamese Black Coffee",
         },
         {
           name: "CAFE SỮA",
           hot: "25K",
           cold: "25K",
-          description: "Vietnamese coffee with condensed milk",
+          description: "Condensed Coffee / Milk Coffee",
         },
         {
           name: "CAFE MUỐI",
           hot: "-",
           cold: "35K",
-          description: "Salted coffee - a unique twist",
+          description: "Salty Coffee",
+          bestSeller: true,
         },
         {
           name: "BẠC XỈU",
           hot: "-",
           cold: "33K",
-          description: "White coffee with lots of milk",
+          description: "Vietnamese Latte",
         },
         {
           name: "BẠC XỈU MUỐI",
           hot: "-",
           cold: "35K",
-          description: "Salted white coffee",
+          description: "Vietnamese Latte with Salt-Cream",
         },
         {
           name: "CAFE DỪA",
           hot: "-",
           cold: "42K",
-          description: "Coconut coffee blend",
+          description: "Coconut Coffee",
         },
       ],
     },
@@ -64,6 +66,7 @@ const Menu = () => {
           name: "MATCHA LATTE",
           price: "39K",
           description: "Smooth matcha with steamed milk",
+          bestSeller: true,
         },
         {
           name: "MATCHA KEM MUỐI",
@@ -102,6 +105,7 @@ const Menu = () => {
           hot: "29K",
           cold: "29K",
           description: "Rich chocolate drink",
+          bestSeller: true,
         },
         {
           name: "CACAO MUỐI",
@@ -155,17 +159,18 @@ const Menu = () => {
           description: "Peach orange lemongrass tea",
         },
         {
-          name: "TRÀ Ổ LONG VẢI",
+          name: "TRÀ Ô LONG VẢI",
           price: "45K",
           description: "Oolong tea with lychee",
         },
         {
-          name: "TRÀ ỐI HOA HỒNG",
+          name: "TRÀ ỔI HOA HỒNG",
           price: "45K",
           description: "Guava rose tea",
+          bestSeller: true,
         },
         {
-          name: "TRÀ Ổ LONG ỐI",
+          name: "TRÀ Ô LONG ỔI",
           price: "45K",
           description: "Oolong guava tea",
         },
@@ -174,7 +179,7 @@ const Menu = () => {
       ],
     },
     snacks: {
-      title: "ĐỒ ĂN VẶT",
+      title: "SNACK",
       icon: <Cookie className="w-6 h-6" />,
       color: "yellow",
       items: [
@@ -244,7 +249,10 @@ const Menu = () => {
   const currentCategory = menuData[activeCategory];
 
   return (
-    <section id="menu" className="py-20 bg-gradient-to-br from-amber-50 to-orange-50 ">
+    <section
+      id="menu"
+      className="py-20 bg-gradient-to-br from-amber-50 to-orange-50 "
+    >
       <div className="min-h-screen py-4">
         <div className="max-w-5xl mx-auto px-4">
           {/* Header - Compact */}
@@ -325,13 +333,25 @@ const Menu = () => {
                     key={index}
                     className={`p-4 border ${getBorderColor(
                       currentCategory.color
-                    )} rounded-lg hover:shadow-md transition-all duration-300`}
+                    )} rounded-lg hover:shadow-md transition-all duration-300 ${
+                      item.bestSeller
+                        ? "ring-2 ring-yellow-400 bg-gradient-to-br from-yellow-50 to-amber-50"
+                        : ""
+                    }`}
                   >
                     <div className="flex justify-between items-start gap-3">
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-lg font-bold text-white-800 mb-1 leading-tight">
-                          {item.name}
-                        </h4>
+                        <div className="flex items-center gap-2 mb-1">
+                          <h4 className="text-lg font-bold text-white-800 leading-tight">
+                            {item.name}
+                          </h4>
+                          {item.bestSeller && (
+                            <div className="flex items-center gap-1 px-2 py-1 bg-yellow-400 text-yellow-900 rounded-full text-xs font-bold">
+                              <Crown className="w-3 h-3" />
+                              <span>BEST SELLER</span>
+                            </div>
+                          )}
+                        </div>
                         <p className="text-white-600 text-xs mb-2 line-clamp-2">
                           {item.description}
                         </p>
